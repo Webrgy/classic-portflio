@@ -21,5 +21,3 @@ container.addEventListener("click", e => {
         element.classList.add("active")
     }
 })
-
-console.log(currentActive);
