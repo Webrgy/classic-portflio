@@ -966,7 +966,7 @@ header {
         grid-template-columns: repeat(1, 1fr);
     padding-bottom: 6rem;
   }
-  .container {
+  section {
     padding: 2rem 2.5rem !important;
   }
   .about-stats-progress .progress-bars {
@@ -1037,8 +1037,8 @@ header {
 }
 
 @media screen and (max-width: 1432px) {
-  .container {
-    padding: 7rem 11rem;
+  section {
+    padding: 7rem 11rem !important;
   }
   .contact-content-con {
     -webkit-box-orient: vertical;
@@ -1066,6 +1066,13 @@ header {
   .main-title h2 .bg-text {
     font-size: 5.5rem;
   }
+  .about-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .about-container .about-stats {
+    padding-top: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 1250px) {
@@ -1081,9 +1088,19 @@ header {
   .header-content .header-text {
     padding-right: 9rem;
   }
+  .about-container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .about-container .about-stats {
+    padding-top: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 660px) {
+  section {
+    padding: 7rem 3rem !important;
+  }
   .blogs {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
@@ -1114,15 +1131,25 @@ header {
 }
 
 @media screen and (max-width: 970px) {
-  .container {
-    padding: 7rem 6rem;
+  section {
+    padding: 7rem 6rem !important;
   }
   .about-container .about-info {
     padding-right: 0rem;
   }
-  .header-content {
+  .about-stats-progress .progress-bars {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
+  }
+  .about-container .about-stats {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .timeline {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .header-content {
     padding-bottom: 6rem;
   }
   .banner-img .h-shape {
@@ -1147,8 +1174,8 @@ header {
 }
 
 @media screen and (max-width: 700px) {
-  .container {
-    padding: 7rem 3rem;
+  section {
+    padding: 7rem 3rem !important;
   }
   .about-stats-progress .progress-bars {
     -ms-grid-columns: (1fr)[1];
