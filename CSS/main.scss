@@ -7,13 +7,13 @@
     font-family: 'Poppins', sans-serif;
 }
 :root {
-    --color-primary: #191d2b;
-    --color-secondary: #27AE60;
-    --color-white: #FFFFFF;
+    --color-primary: #F6F6F6;
+    --color-secondary: #F53838;
+    --text-color: #0B132A;
     --color-black: #000;
     --color-grey0: #f8f8f8;
-    --color-grey-1: #dbe1e8;
-    --color-grey-2: #b2becd;
+    --text-color-secondary: #4F5665;
+    --color-grey: #F8F8F8;
     --color-grey-3: #6c7983;
     --color-grey-4: #454e56;
     --color-grey-5: #2a2e35;
@@ -26,7 +26,7 @@
 body {
     background-color: var(--color-primary);
     font-size: 1.1rem;
-    color: var(--color-white);
+    color: var(--text-color);
     transition: var(--main-transition);
 }
 
@@ -84,7 +84,7 @@ a {
 header {
     height: 100vh;
     overflow: hidden;
-    color: var(--color-white);
+    color: var(--text-color);
     padding: 0 !important;
 }
 
@@ -134,7 +134,7 @@ header {
         
         i {
             font-size: 1.2rem;
-            color: var(--color-grey-2);
+            color: var(--color-primary);
             pointer-events: none;
         }
 
@@ -143,7 +143,7 @@ header {
         }
 
         &:hover {
-            background-color: var(--color-grey-1);
+            background-color: var(--text-color-secondary);
         }
     }
 }
@@ -258,7 +258,7 @@ header {
                     position: relative;
                     text-transform: uppercase;
                     font-size: 1.2rem;
-                    color: var(--color-grey-1);
+                    color: var(--text-color-secondary);
                     &::before {
                         content: "";
                         position: absolute;
@@ -278,7 +278,7 @@ header {
         p {
             line-height: 2rem;
             padding: 1rem;
-            color: var(--color-grey-1);
+            color: var(--text-color-secondary);
         }
         h4 {
             font-size: 2rem;
@@ -306,7 +306,7 @@ header {
                 display: flex;
                 align-items: center;
                 .progress-value-text {
-                    color: var(--color-grey-2);
+                    color: var(--text-color-secondary);
                 }
                 .progress {
                     width: 100%;
@@ -359,7 +359,9 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
-            i { font-size: 1.3rem; }
+            i { font-size: 1.3rem;
+                color: var(--color-grey0);
+            }
         }
         .tl-duration {
             padding: .2rem .6rem;
@@ -369,6 +371,7 @@ header {
             font-size: .8rem;
             text-transform: uppercase;
             font-weight: 500;
+            color: var(--color-grey0);
         }
         h5 {
             padding: 1rem 0;
@@ -376,12 +379,12 @@ header {
             font-size: 1.3rem;
             font-weight: 600;
             span {
-                color: var(--color-grey-2);
+                color: var(--color-grey-3);
                 font-weight: 500;
                 font-size: 1.2rem;
             }
         }
-        p{ color: var(--color-grey-2); }
+        p{ color: var(--color-grey-6); }
     }
 }
 
@@ -428,7 +431,7 @@ header {
             transition: var(--main-transition);
             h3 {
                 font-size: 1.5rem;
-                color: var(--color-white);
+                color: var(--text-color);
                 margin-bottom: 1.5rem;
             }
             .icons {
@@ -448,11 +451,11 @@ header {
                     transition: all .4s ease-in-out;
                     i {
                         font-size: 1.5rem;
-                        color: var(--color-white);
+                        color: var(--text-color);
                         margin: 0 1rem;
                     }
                     &:hover {
-                        background-color: var(--color-white);
+                        background-color: var(--text-color);
                         i { color: var(--color-primary); }
                     }
                 }
@@ -469,7 +472,7 @@ header {
     margin-top: 3rem;
     .blog {
         position: relative;
-        background-color: var(--color-grey-5);
+        background-color: var(--color-grey0);
         border-radius: 5px;
         box-shadow: 1px 1px 20px rgba(0,0,0,.1);
         transition: var(--main-transition);
@@ -504,7 +507,7 @@ header {
                 &:hover { color: var(--color-secondary); }
             }
             p{
-                color: var(--color-grey-2);
+                color: var(--text-color-secondary);
                 line-height: 2rem;
                 padding-bottom: 1rem;
             }
@@ -556,7 +559,7 @@ header {
             a {
                 display: flex;
                 align-items: center;
-                color: var(--color-white);
+                color: var(--text-color);
                 background-color: var(--color-grey-5);
                 cursor: pointer;
                 justify-content: center;
@@ -567,13 +570,13 @@ header {
                 transition: all .4s ease-in-out;
                 &:hover {
                     background-color: var(--color-secondary);
-                    i { color: var(--color-primary); }
                 }
                 i {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     font-size: 1.3rem;
+                    color: var(--color-primary);
                 }
             }
         }
@@ -592,10 +595,11 @@ header {
                 padding: .8rem 1.1rem;
                 outline: none;
                 border: none;
-                background-color: var(--color-grey-5);
+                background-color: var(--color-grey);
                 width: 100%;
-                color: var(--color-white);
+                color: var(--text-color);
                 resize: none;
+                border: solid 1px var(--color-grey-5);
             }
         }
         .i-c-2 {

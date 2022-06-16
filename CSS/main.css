@@ -9,13 +9,13 @@
 }
 
 :root {
-  --color-primary: #191d2b;
-  --color-secondary: #27AE60;
-  --color-white: #FFFFFF;
+  --color-primary: #F6F6F6;
+  --color-secondary: #F53838;
+  --text-color: #0B132A;
   --color-black: #000;
   --color-grey0: #f8f8f8;
-  --color-grey-1: #dbe1e8;
-  --color-grey-2: #b2becd;
+  --text-color-secondary: #4F5665;
+  --color-grey: #F8F8F8;
   --color-grey-3: #6c7983;
   --color-grey-4: #454e56;
   --color-grey-5: #2a2e35;
@@ -29,7 +29,7 @@
 body {
   background-color: var(--color-primary);
   font-size: 1.1rem;
-  color: var(--color-white);
+  color: var(--text-color);
   -webkit-transition: var(--main-transition);
   transition: var(--main-transition);
 }
@@ -108,7 +108,7 @@ a {
 header {
   height: 100vh;
   overflow: hidden;
-  color: var(--color-white);
+  color: var(--text-color);
   padding: 0 !important;
 }
 
@@ -197,7 +197,7 @@ header {
 
 .controlls .control i {
   font-size: 1.2rem;
-  color: var(--color-grey-2);
+  color: var(--color-primary);
   pointer-events: none;
 }
 
@@ -206,7 +206,7 @@ header {
 }
 
 .controlls .control:hover {
-  background-color: var(--color-grey-1);
+  background-color: var(--text-color-secondary);
 }
 
 .main-title {
@@ -367,7 +367,7 @@ header {
   position: relative;
   text-transform: uppercase;
   font-size: 1.2rem;
-  color: var(--color-grey-1);
+  color: var(--text-color-secondary);
 }
 
 .about-container .about-stats .about-item .about-text .small-text::before {
@@ -388,7 +388,7 @@ header {
 .about-container .about-info p {
   line-height: 2rem;
   padding: 1rem;
-  color: var(--color-grey-1);
+  color: var(--text-color-secondary);
 }
 
 .about-container .about-info h4 {
@@ -437,7 +437,7 @@ header {
 }
 
 .about-stats-progress .progress-bars .progress-bar .progress-value .progress-value-text {
-  color: var(--color-grey-2);
+  color: var(--text-color-secondary);
 }
 
 .about-stats-progress .progress-bars .progress-bar .progress-value .progress {
@@ -524,6 +524,7 @@ header {
 
 .timeline .timeline-item .tl-icon i {
   font-size: 1.3rem;
+  color: var(--color-grey0);
 }
 
 .timeline .timeline-item .tl-duration {
@@ -534,6 +535,7 @@ header {
   font-size: .8rem;
   text-transform: uppercase;
   font-weight: 500;
+  color: var(--color-grey0);
 }
 
 .timeline .timeline-item h5 {
@@ -544,13 +546,13 @@ header {
 }
 
 .timeline .timeline-item h5 span {
-  color: var(--color-grey-2);
+  color: var(--color-grey-3);
   font-weight: 500;
   font-size: 1.2rem;
 }
 
 .timeline .timeline-item p {
-  color: var(--color-grey-2);
+  color: var(--color-grey-6);
 }
 
 .port-text {
@@ -616,7 +618,7 @@ header {
 
 .portfolios .portfolio-item .hover-items h3 {
   font-size: 1.5rem;
-  color: var(--color-white);
+  color: var(--text-color);
   margin-bottom: 1.5rem;
 }
 
@@ -654,12 +656,12 @@ header {
 
 .portfolios .portfolio-item .hover-items .icons .icon i {
   font-size: 1.5rem;
-  color: var(--color-white);
+  color: var(--text-color);
   margin: 0 1rem;
 }
 
 .portfolios .portfolio-item .hover-items .icons .icon:hover {
-  background-color: var(--color-white);
+  background-color: var(--text-color);
 }
 
 .portfolios .portfolio-item .hover-items .icons .icon:hover i {
@@ -677,7 +679,7 @@ header {
 
 .blogs .blog {
   position: relative;
-  background-color: var(--color-grey-5);
+  background-color: var(--color-grey0);
   border-radius: 5px;
   -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
           box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
@@ -735,7 +737,7 @@ header {
 }
 
 .blogs .blog .blog-text p {
-  color: var(--color-grey-2);
+  color: var(--text-color-secondary);
   line-height: 2rem;
   padding-bottom: 1rem;
 }
@@ -812,7 +814,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: var(--color-white);
+  color: var(--text-color);
   background-color: var(--color-grey-5);
   cursor: pointer;
   -webkit-box-pack: center;
@@ -830,10 +832,6 @@ header {
   background-color: var(--color-secondary);
 }
 
-.contact-content-con .left-contact .contact-icon a:hover i {
-  color: var(--color-primary);
-}
-
 .contact-content-con .left-contact .contact-icon a i {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -845,6 +843,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 1.3rem;
+  color: var(--color-primary);
 }
 
 .contact-content-con .right-contact {
@@ -866,10 +865,11 @@ header {
   padding: .8rem 1.1rem;
   outline: none;
   border: none;
-  background-color: var(--color-grey-5);
+  background-color: var(--color-grey);
   width: 100%;
-  color: var(--color-white);
+  color: var(--text-color);
   resize: none;
+  border: solid 1px var(--color-grey-5);
 }
 
 .contact-content-con .right-contact .i-c-2 {
